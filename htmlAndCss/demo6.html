@@ -1,0 +1,82 @@
+<!-- 1 static
+     2 relative
+     3 absolute
+     4 fixed
+     5 sticky -->
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+     
+
+     .container {
+       
+        width: 100%;
+        height: 200px;
+        border: 1px solid black;
+     }
+     
+     #d1, #d2, #d3, #d4, #d5 {
+        width: 100px;
+        height: 100px;
+        border: 1px solid black;
+        text-align: center;
+    
+    
+    }
+     
+    #d1 {
+        position: static;
+        background-color: lightgray;
+
+    }
+    #d2 {
+        position: relative;
+        background-color: lightblue;
+        top: 2px;
+        left: 30px;
+    }
+
+    #d3 {
+        position: absolute;
+        background-color: lightgreen;
+        top: 500px;
+        left: 100px;
+    }
+    
+    #d4 {
+        position: fixed;
+        background-color: lightpink;
+        top: 200px;
+        left: 200px;
+    }
+
+
+
+
+    </style>
+</head>
+<body>
+    
+                <div class="container">
+                    <div id="d1">My div 1</div>
+                    <div id="d2">My div 2</div>
+                    <div id="d3">My div 3</div>
+                    <div id="d4">My div 4</div>
+                    <div id="d5">My div 5</div>
+                </div>
+    
+
+
+
+
+
+</body>
+</html>
