@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Flex Layout</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            padding: 10px;
+        }
+
+        /* Common Style */
+
+        .container>* {
+            border: 2px solid blue;
+            border-radius: 5px;
+            padding: 20px;
+            color: white;
+            text-align: center;
+            font-size: 20px;
+        }
+
+        /* Header */
+
+        .myheader {
+            background: red;
+            width: 100%;
+            height: 70px;
+            order: 1;
+        }
+
+        /* Left Sidebar */
+
+        .aside1 {
+            background: green;
+        }
+
+        /* Main */
+
+        .main {
+            background: royalblue;
+            min-height: 300px;
+        }
+
+        /* Right Sidebar */
+
+        .aside2 {
+            background: gray;
+        }
+
+        /* Footer */
+
+        .myfooter {
+            background: purple;
+            width: 100%;
+            height: 70px;
+            order: 5;
+        }
+
+        /* 
+        Desktop (>=992px)
+ */
+
+        @media (min-width:992px) {
+
+            .aside1 {
+                order: 2;
+                flex: 1;
+            }
+
+            .main {
+                order: 3;
+                flex: 4;
+            }
+
+            .aside2 {
+                order: 4;
+                flex: 1;
+            }
+
+        }
+
+        /* 
+      Tablet (768-991px)
+*/
+
+        @media (min-width:768px) and (max-width:991px) {
+
+            .main {
+                order: 2;
+                flex: 3;
+            }
+
+            .aside1 {
+                order: 3;
+                flex: 1;
+            }
+
+            .aside2 {
+                order: 4;
+                width: 100%;
+            }
+
+        }
+
+        /* 
+       Mobile (<768px)   */
+
+        @media (max-width:767px) {
+
+            .container {
+                flex-direction: column;
+            }
+
+            .myheader {
+                order: 1;
+            }
+
+            .main {
+                order: 2;
+            }
+
+            .aside1 {
+                order: 3;
+            }
+
+            .aside2 {
+                order: 4;
+            }
+
+            .myfooter {
+                order: 5;
+            }
+
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header class="myheader">
+            Header
+        </header>
+
+        <aside class="aside1">
+            Left Sidebar
+        </aside>
+
+        <main class="main">
+            Main Content
+        </main>
+
+        <aside class="aside2">
+            Right Sidebar
+        </aside>
+
+        <footer class="myfooter">
+            Footer
+        </footer>
+
+    </div>
+
+</body>
+
+</html>

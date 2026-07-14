@@ -7,15 +7,26 @@
     <title>Document</title>
 </head>
 <style>
+    h1{
+        display: none;
+    }
     @media screen and (min-width: 800px) {
         body {
             background-color: red;
+        }
+        #h1{
+            color: white;
+            display: block;
         }
     }
 
     @media screen and (min-width: 500px) and (max-width:799px) {
         body {
             background-color: yellow;
+        }
+        #h2 {
+            color: black;
+            display: block;
         }
 
     }
@@ -24,13 +35,25 @@
         body {
             background-color: blue;
         }
+        #h3{
+            color: black;
+            display: block;
+        }
 
     }
 </style>
 
 <body>
-    <h1>
+    <h1 id="h1">
+        hello red
 
+    </h1>
+
+    <h1 id="h2">
+        hello yellow
+    </h1>
+    <h1 id="h3">
+        hello blue
     </h1>
 
 </body>
